@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Atharva College Chatbot - Galaxy Edition</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="stars-overlay"></div>
+
+    <div class="glass-container">
+        <aside class="sidebar">
+            <div class="brand"><i class="fas fa-sitemap"></i> Chat Center</div>
+            <h2>Quick Access</h2>
+            <div class="nav-item" onclick="sendSuggestion('What is the fee structure?')">Fees <i
+                    class="fas fa-chevron-right"></i></div>
+            <div class="nav-item" onclick="sendSuggestion('Tell me about admissions')">Admissions <i
+                    class="fas fa-chevron-right"></i></div>
+            <div class="nav-item" onclick="sendSuggestion('What courses are available?')">courses <i
+                    class="fas fa-chevron-right"></i></div>
+            <div class="nav-item" onclick="sendSuggestion('Tell me about INFT')">INFT <i
+                    class="fas fa-chevron-right"></i></div>
+        </aside>
+
+        <main class="chat-section">
+            <header class="chat-header">
+                <div class="bot-profile">
+                    <!-- Using an enhanced icon to act as the 3D robot -->
+                    <div class="icon-circle"><i class="fas fa-robot"></i></div>
+                    Atharva College Chatbot
+                </div>
+            </header>
+
+            <div class="chat-body" id="chatbox">
+                <!-- Messages will be injected here -->
+                <div class="chips">
+                    <button class="chip" onclick="sendSuggestion('Gym')">Gym</button>
+                    <button class="chip" onclick="sendSuggestion('sports')">sports</button>
+                    <button class="chip" onclick="sendSuggestion('highest package')">highest package</button>
+                </div>
+
+                <div class="status-area" id="voiceStatus" style="display: none;">
+                    <i class="fas fa-microphone"></i>
+                    <span>Listening...</span>
+                </div>
+            </div>
+
+            <footer class="footer-area">
+                <div class="input-pill">
+                    <input type="text" id="userInput" placeholder="Type or Speak..." autocomplete="off">
+                </div>
+                <button class="mic-btn-circle" id="mic-btn">
+                    <i class="fas fa-microphone"></i>
+                </button>
+                <button class="send-btn-pill" id="send-btn">Send</button>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
